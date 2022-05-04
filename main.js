@@ -1,7 +1,4 @@
-var answer = ""
-var counter = 4;
-var count = 0;
-var gameFinish = false;
+var answer = "", gridPos = 4, moveCount = 0, gameFinish = false;
 
 function getWord() {
     answer = words[Math.floor(Math.random() * words.length)]
@@ -9,24 +6,24 @@ function getWord() {
 };
 
 function writeLetter(button) {
-    if (count == 5 || gameFinish) {
+    if (moveCount == 5 || gameFinish) {
         return;
     }
     var container = document.getElementsByClassName("container")[0];
-    container.children[counter].innerText = button.innerText;
-    counter--;
-    count++;
+    container.children[gridPos].innerText = button.innerText;
+    gridPos--;
+    moveCount++;
 }
 
 function checkGuess() {
-    if (count != 5) {
+    if (moveCount != 5) {
         return;
     }
-    let ch = 0;
+    let chIdx = 0;
     let correct = 0;
     var container = document.getElementsByClassName("container")[0];
-    for (let i = counter + 5; i > counter; i--) {
-        if (container.children[i].innerText == answer[ch++]) {
+    for (let i = gridPos + 5; i > gridPos; i--) {
+        if (container.children[i].innerText == answer[chIdx++]) {
             container.children[i].id = "green";
             correct++;
         } else if (answer.includes(container.children[i].innerText)) {
@@ -39,21 +36,21 @@ function checkGuess() {
         result.innerText = "!ניצחת"
         result.style.opacity = 1;
         gameFinish = true;
-    } else if (counter == 24) {
+    } else if (gridPos == 24) {
         result.innerText = " הפסדת :( המילה הייתה " + answer
         result.style.opacity = 1;
         gameFinish = true;
 
     }
-    counter += 10;
-    count = 0;
+    gridPos += 10;
+    moveCount = 0;
 }
 
 function deleteLetter() {
-    if (count == 0 || gameFinish) {
+    if (moveCount == 0 || gameFinish) {
         return
     }
     var container = document.getElementsByClassName("container")[0];
-    container.children[++counter].innerText = "";
-    count--;
+    container.children[++gridPos].innerText = "";
+    moveCount--;
 }
