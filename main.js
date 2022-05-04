@@ -1,7 +1,7 @@
 var answer = ""
 var counter = 4;
 var count = 0;
-var gameFinish=false;
+var gameFinish = false;
 
 function readText() {
     answer = words[Math.floor(Math.random() * words.length)]
@@ -9,7 +9,7 @@ function readText() {
 };
 
 function writeWord(button) {
-    if (count == 5||gameFinish) {
+    if (count == 5 || gameFinish) {
         return;
     }
     var container = document.getElementsByClassName("container")[0];
@@ -50,7 +50,7 @@ function checkGuess() {
 }
 
 function deleteLetter() {
-    if (count == 0||gameFinish) {
+    if (count == 0 || gameFinish) {
         return
     }
     var container = document.getElementsByClassName("container")[0];
