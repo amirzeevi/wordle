@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="words.js"></script>
+    <title>Wordle</title>
+</head>
+
+<body onload="readText()">
+    <div id="big">
+        <div class="container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <span id="result">-</span>
+        <div class="keyboard">
+            <div id="row">
+                <button onclick="writeWord(this)">ק</button>
+                <button onclick="writeWord(this)">ר</button>
+                <button onclick="writeWord(this)">א</button>
+                <button onclick="writeWord(this)">ט</button>
+                <button onclick="writeWord(this)">ו</button>
+                <button onclick="writeWord(this)">ן</button>
+                <button onclick="writeWord(this)">ם</button>
+                <button onclick="writeWord(this)">פ</button>
+            </div>
+            <div id="row">
+                <button onclick="writeWord(this)">ש</button>
+                <button onclick="writeWord(this)">ד</button>
+                <button onclick="writeWord(this)">ג</button>
+                <button onclick="writeWord(this)">כ</button>
+                <button onclick="writeWord(this)">ע</button>
+                <button onclick="writeWord(this)">י</button>
+                <button onclick="writeWord(this)">ח</button>
+                <button onclick="writeWord(this)">ל</button>
+                <button onclick="writeWord(this)">ך</button>
+                <button onclick="writeWord(this)">ף</button>
+            </div>
+            <div id="row">
+                <button onclick="writeWord(this)">ז</button>
+                <button onclick="writeWord(this)">ס</button>
+                <button onclick="writeWord(this)">ב</button>
+                <button onclick="writeWord(this)">ה</button>
+                <button onclick="writeWord(this)">נ</button>
+                <button onclick="writeWord(this)">מ</button>
+                <button onclick="writeWord(this)">צ</button>
+                <button onclick="writeWord(this)">ת</button>
+            </div>
+            <div id="row">
+                <button onclick="checkGuess()">שלח</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button onclick="deleteLetter()">מחק</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
