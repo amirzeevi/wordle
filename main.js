@@ -3,12 +3,12 @@ var counter = 4;
 var count = 0;
 var gameFinish = false;
 
-function readText() {
+function getWord() {
     answer = words[Math.floor(Math.random() * words.length)]
     console.log(answer)
 };
 
-function writeWord(button) {
+function writeLetter(button) {
     if (count == 5 || gameFinish) {
         return;
     }

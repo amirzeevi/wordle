@@ -11,7 +11,7 @@
     <title>Wordle</title>
 </head>
 
-<body onload="readText()">
+<body onload="getWord()">
     <div id="big">
         <div class="container">
             <div></div>
@@ -48,36 +48,36 @@
         <span id="result">-</span>
         <div class="keyboard">
             <div id="row">
-                <button onclick="writeWord(this)">ק</button>
-                <button onclick="writeWord(this)">ר</button>
-                <button onclick="writeWord(this)">א</button>
-                <button onclick="writeWord(this)">ט</button>
-                <button onclick="writeWord(this)">ו</button>
-                <button onclick="writeWord(this)">ן</button>
-                <button onclick="writeWord(this)">ם</button>
-                <button onclick="writeWord(this)">פ</button>
+                <button onclick="writeLetter(this)">ק</button>
+                <button onclick="writeLetter(this)">ר</button>
+                <button onclick="writeLetter(this)">א</button>
+                <button onclick="writeLetter(this)">ט</button>
+                <button onclick="writeLetter(this)">ו</button>
+                <button onclick="writeLetter(this)">ן</button>
+                <button onclick="writeLetter(this)">ם</button>
+                <button onclick="writeLetter(this)">פ</button>
             </div>
             <div id="row">
-                <button onclick="writeWord(this)">ש</button>
-                <button onclick="writeWord(this)">ד</button>
-                <button onclick="writeWord(this)">ג</button>
-                <button onclick="writeWord(this)">כ</button>
-                <button onclick="writeWord(this)">ע</button>
-                <button onclick="writeWord(this)">י</button>
-                <button onclick="writeWord(this)">ח</button>
-                <button onclick="writeWord(this)">ל</button>
-                <button onclick="writeWord(this)">ך</button>
-                <button onclick="writeWord(this)">ף</button>
+                <button onclick="writeLetter(this)">ש</button>
+                <button onclick="writeLetter(this)">ד</button>
+                <button onclick="writeLetter(this)">ג</button>
+                <button onclick="writeLetter(this)">כ</button>
+                <button onclick="writeLetter(this)">ע</button>
+                <button onclick="writeLetter(this)">י</button>
+                <button onclick="writeLetter(this)">ח</button>
+                <button onclick="writeLetter(this)">ל</button>
+                <button onclick="writeLetter(this)">ך</button>
+                <button onclick="writeLetter(this)">ף</button>
             </div>
             <div id="row">
-                <button onclick="writeWord(this)">ז</button>
-                <button onclick="writeWord(this)">ס</button>
-                <button onclick="writeWord(this)">ב</button>
-                <button onclick="writeWord(this)">ה</button>
-                <button onclick="writeWord(this)">נ</button>
-                <button onclick="writeWord(this)">מ</button>
-                <button onclick="writeWord(this)">צ</button>
-                <button onclick="writeWord(this)">ת</button>
+                <button onclick="writeLetter(this)">ז</button>
+                <button onclick="writeLetter(this)">ס</button>
+                <button onclick="writeLetter(this)">ב</button>
+                <button onclick="writeLetter(this)">ה</button>
+                <button onclick="writeLetter(this)">נ</button>
+                <button onclick="writeLetter(this)">מ</button>
+                <button onclick="writeLetter(this)">צ</button>
+                <button onclick="writeLetter(this)">ת</button>
             </div>
             <div id="row">
                 <button onclick="checkGuess()">שלח</button>&nbsp;&nbsp;&nbsp;&nbsp;
