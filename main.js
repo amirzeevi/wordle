@@ -1,8 +1,8 @@
-var answer = "", gridPos = 4, moveCount = 0, gameFinish = false;
+var answer = "", gridPos, moveCount, gameFinish;
 
 function getWord() {
+    gridPos = 4, moveCount = 0, gameFinish = false, result.style.opacity = 0;;
     answer = words[Math.floor(Math.random() * words.length)]
-    console.log(answer)
 };
 
 function writeLetter(button) {
@@ -19,8 +19,7 @@ function checkGuess() {
     if (moveCount != 5) {
         return;
     }
-    let chIdx = 0;
-    let correct = 0;
+    let chIdx = 0, correct = 0;
     var container = document.getElementsByClassName("container")[0];
     for (let i = gridPos + 5; i > gridPos; i--) {
         if (container.children[i].innerText == answer[chIdx++]) {
@@ -53,4 +52,14 @@ function deleteLetter() {
     var container = document.getElementsByClassName("container")[0];
     container.children[++gridPos].innerText = "";
     moveCount--;
+}
+
+function newGame() {
+    var container = document.getElementsByClassName("container")[0];
+    for(let i = 0; i<container.children.length;i++){
+        container.children[i].innerText = "";
+        container.children[i].id = "";
+    }
+    getWord();
+
 }

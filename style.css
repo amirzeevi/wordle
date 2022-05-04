@@ -42,7 +42,7 @@ body {
 }
 
 .keyboard {
-    margin-top: 3vh;
+    margin-top: 2vh;
 }
 
 #row {
@@ -66,9 +66,14 @@ button:hover {
 }
 
 #result {
-    opacity: 0;
     margin-top: 3vh;
     display: flex;
     justify-content: center;
     color: white;
+}
+
+#newGame {
+    margin-top: 1vh;
+    width: fit-content;
+    background-color: rgba(77, 209, 95, 0.687);
 }
