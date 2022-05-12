@@ -9,7 +9,7 @@ function writeLetter(button) {
     if (moveCount == 5 || gameFinish) {
         return;
     }
-    var container = document.getElementsByClassName("container")[0];
+    const container = document.getElementsByClassName("container")[0];
     container.children[gridPos].innerText = button.innerText;
     gridPos--;
     moveCount++;
@@ -20,7 +20,7 @@ function checkGuess() {
         return;
     }
     let chIdx = 0, correct = 0;
-    var container = document.getElementsByClassName("container")[0];
+    const container = document.getElementsByClassName("container")[0];
     for (let i = gridPos + 5; i > gridPos; i--) {
         if (container.children[i].innerText == answer[chIdx++]) {
             container.children[i].id = "green";
@@ -49,7 +49,7 @@ function deleteLetter() {
     if (moveCount == 0 || gameFinish) {
         return
     }
-    var container = document.getElementsByClassName("container")[0];
+    const container = document.getElementsByClassName("container")[0];
     container.children[++gridPos].innerText = "";
     moveCount--;
 }
